@@ -1,0 +1,52 @@
+<div class="Post-RichTextContainer">
+<div class="css-1yuhvjn">
+<div class="RichText ztext Post-RichText css-14bz7qe">
+<blockquote data-first-child="" data-pid="4pGE_IUP">本文是微软对语音前端pipeline基于任务解耦方面的相关工作。区别于目前流行的传统线性AEC+以（线性AEC输出/传声器接收信号/远端信号）作为输入的深度神经网络的结构；采用了NN回声估计+以(估计回声和去回声后的粗谱)作为输入的神经网络的结构，继承了语音增强中任务解耦的思路<sup data-text="1" data-url="https://www.isca-speech.org/archive/pdfs/interspeech_2021/li21g_interspeech.pdf" data-numero="1" data-draft-node="inline" data-draft-type="reference" data-tooltip="1 https://www.isca-speech.org/archive/pdfs/interspeech_2021/li21g_interspeech.pdf" data-tooltip-preset="white" data-tooltip-classname="ztext-referene-tooltip"><a id="ref_1_0" href="https://zhuanlan.zhihu.com/p/515947563#ref_1" data-reference-link="true">[1]</a></sup><sup data-text="2" data-url="https://www.isca-speech.org/archive/pdfs/interspeech_2021/liu21b_interspeech.pdf" data-numero="2" data-draft-node="inline" data-draft-type="reference" data-tooltip="2 https://www.isca-speech.org/archive/pdfs/interspeech_2021/liu21b_interspeech.pdf" data-tooltip-preset="white" data-tooltip-classname="ztext-referene-tooltip"><a id="ref_2_0" href="https://zhuanlan.zhihu.com/p/515947563#ref_2" data-reference-link="true">[2]</a></sup>。</blockquote>
+<p data-pid="Lchy8xrP">论文题目：<a class=" wrap external" href="https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/2205.06931.pdf" rel="nofollow noreferrer" target="_blank" data-za-detail-view-id="1043">Task splitting for dnn-based acoustic echo and noise removal</a></p>
+<p data-pid="LIT87CBY">作者：Sebastian Braun, Maria Luis Valero (微软)</p>
+<img src="https://pic3.zhimg.com/80/v2-c62177212580130caf68a75a05d5b386_720w.jpg" width="1092" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="1092" data-rawheight="360" data-original="https://pic3.zhimg.com/v2-c62177212580130caf68a75a05d5b386_r.jpg" data-actualsrc="https://pic3.zhimg.com/v2-c62177212580130caf68a75a05d5b386_b.jpg" data-lazy-status="ok" />
+<h2>背景动机</h2>
+<ul>
+<li data-pid="hekLg1yi">之前任务解耦思路的工作只证明了每个阶段会带来性能收益，以及比基线系统性能更好，但是没比较过会比相似结构的网络无约束优化更好。</li>
+<li data-pid="BWTNava-">之前任务解耦思路的工作要依次训练每个阶段，训练过程很耗时</li>
+</ul>
+<p data-pid="NoFr7kcL">本文贡献：</p>
+<ul>
+<li data-pid="uca4bcOc">设计了一个基于DNN的两阶段系统，该系统由深度声学回声消除 (DAEC)和噪声及残留回声抑制(NRES)模块组成。</li>
+<li data-pid="_Z6X3dlx">提出了一种自适应损失以避免繁琐的多阶段训练。</li>
+<li data-pid="lVrlId1F">这种方法，AEC模块只去除回波，这不会产生明显的信号失真；NRES去除噪声和残留回声，只引入一定的信号失真。提出的两级系统优于单级基线，特别是在信号失真方面。</li>
+</ul>
+<h2>模型架构</h2>
+<img src="https://pic2.zhimg.com/80/v2-eb87e6ccfca2bd7eb6bef8cf5f4effa5_720w.jpg" width="735" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="735" data-rawheight="265" data-original="https://pic2.zhimg.com/v2-eb87e6ccfca2bd7eb6bef8cf5f4effa5_r.jpg" data-actualsrc="https://pic2.zhimg.com/v2-eb87e6ccfca2bd7eb6bef8cf5f4effa5_b.jpg" data-lazy-status="ok" /><img src="https://pic4.zhimg.com/80/v2-fea73d5f36e9244f14c9af8b0c8d91c3_720w.jpg" width="681" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="681" data-rawheight="217" data-original="https://pic4.zhimg.com/v2-fea73d5f36e9244f14c9af8b0c8d91c3_r.jpg" data-actualsrc="https://pic4.zhimg.com/v2-fea73d5f36e9244f14c9af8b0c8d91c3_b.jpg" data-lazy-status="ok" />
+<p data-pid="gpPIMEpo">模型采用CRUSE，详见<a class="internal" href="https://zhuanlan.zhihu.com/p/515969550" data-za-detail-view-id="1043">CRUSE</a>。</p>
+<p data-pid="1IS485Tw"><strong>DAEC模块</strong>网络输入幅度谱压缩后的传声器接收信号和利用幅度平方相干算法帧对齐的远端信号复谱，即输入通道数为4，输出得到估计回声的压缩谱，解压缩后与传声器接收信号相减得到残差信号。</p>
+<p data-pid="ADNCjFcq"><img src="https://www.zhihu.com/equation?tex=E%28k%2Cn%29%3DY%28k%2Cn%29-%5C%7C%5Cwidehat%7BD%7D%28k%2Cn%29%5C%7C%5E%7B%5Cfrac%7B1%7D%7Bc%7D%7De%5E%7Bj%5Cphi_%7B%5Cwidehat%7BD%7D%28k%2Cn%29%7D%7D" alt="[公式]" data-formula="E(k,n)=Y(k,n)-\|\widehat{D}(k,n)\|^{\frac{1}{c}}e^{j\phi_{\widehat{D}(k,n)}}" /></p>
+<p data-pid="05gtCgeR"><strong>NRES模块</strong>输入残差信号和估计回声的压缩复数谱，即输入通道数也为4，网络估计得到多帧滤波器系数，对残差信号进行多帧滤波</p>
+<p data-pid="MwuTS-xQ"><img src="https://www.zhihu.com/equation?tex=%5Cwidehat%7BS%7D%28k%2Cn%29%3D%5Csum_%7B%5Ckappa%3D-K%7D%5E%7BK%7D%7B%5Csum_%7Bl%3D0%7D%5E%7BL%7D%7BG_%7Bk%2Cn%7D%28%5Ckappa%2Cl%29Y%28k-%5Ckappa%2C+n-l%29%7D%7D" alt="[公式]" data-formula="\widehat{S}(k,n)=\sum_{\kappa=-K}^{K}{\sum_{l=0}^{L}{G_{k,n}(\kappa,l)Y(k-\kappa, n-l)}}" /></p>
+<p data-pid="At5uh0mR">式中K=1，L=2</p>
+<p data-pid="UMK0iIYI">AEC的编码器输出和NRES的编码器输出用带点卷积的跳转连接通信。</p>
+<p data-pid="PmnjxvYX"><strong>损失函数</strong></p>
+<p data-pid="BIROTKlA"><img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BL%7D%3D%5Cmathcal%7BL%7D%28%5Cwidehat%7Bs%7D%2Cs%29%2B%5Calpha%5Cmathcal%7BL%7D_%7Basym%7D%28%5Cwidehat%7Bs%7D%2Cs%29%2B%5Cgamma%5Cmathcal%7BL%7D%28%5Cwidehat%7Bd%7D%2Cd%29" alt="[公式]" data-formula="\mathcal{L}=\mathcal{L}(\widehat{s},s)+\alpha\mathcal{L}_{asym}(\widehat{s},s)+\gamma\mathcal{L}(\widehat{d},d)" /></p>
+<p data-pid="KOBqwHD-">第一项是CRUSE中的复数谱压缩MSE损失，第二项是为了防止语音过度抑制，第三项是回声估计损失，这里用不压缩的MAE，因为压缩损失会导致回声欠估计严重</p>
+<p data-pid="9ozUPGpK"><img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BL%7D_%7Basym%7D%28%5Cwidehat%7Bs%7D%2Cs%29%3D%5Csum_%7Bk%2Cn%7D%7Bmax%7B%28%7CS%7C%5Ec-%7C%5Cwidehat%7BS%7D%7C%5Ec%2C0%29%5E2%7D%7D" alt="[公式]" data-formula="\mathcal{L}_{asym}(\widehat{s},s)=\sum_{k,n}{max{(|S|^c-|\widehat{S}|^c,0)^2}}" /></p>
+<p data-pid="AJMP1mIP"><img src="https://www.zhihu.com/equation?tex=%5Cmathcal%7BL%7D%28%5Cwidehat%7Bd%7D%2Cd%29%3D%5Csum_%7Bk%2Cn%7D%7B%7C%5Cwidehat%7BD%7D-D%7C%7D" alt="[公式]" data-formula="\mathcal{L}(\widehat{d},d)=\sum_{k,n}{|\widehat{D}-D|}" /></p>
+<img src="https://pic1.zhimg.com/80/v2-42e00dec712b973af6768336df476a9c_720w.jpg" width="480" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="480" data-rawheight="138" data-original="https://pic1.zhimg.com/v2-42e00dec712b973af6768336df476a9c_r.jpg" data-actualsrc="https://pic1.zhimg.com/v2-42e00dec712b973af6768336df476a9c_b.jpg" data-lazy-status="ok" />
+<h2>数据与结果</h2>
+<img src="https://pic1.zhimg.com/80/v2-e7c0882cf0ffa159bd753dfdbbbac530_720w.jpg" width="777" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="777" data-rawheight="612" data-original="https://pic1.zhimg.com/v2-e7c0882cf0ffa159bd753dfdbbbac530_r.jpg" data-actualsrc="https://pic1.zhimg.com/v2-e7c0882cf0ffa159bd753dfdbbbac530_b.jpg" data-lazy-status="ok" />
+<p data-pid="zdrBJu4i">第一张图越偏左上的模型越好，其他三张越偏右上的越好。</p>
+<ul>
+<li data-pid="Hhxe8p31">单阶段AEC模型CRUSE-AEC-64具有很好的去回声性能但降噪性能明显不如CRUSE-NS-64，因为学习的任务不同</li>
+<li data-pid="04y8rWMf">DAEC不降噪，也几乎不带来语音失真，只去回声</li>
+<li data-pid="G57LC5j7">只见过AEC数据的DAEC与只见过噪声数据的CRUSE-NS级联不如DAEC+NRES联合训练或者CRUSE-AEC</li>
+<li data-pid="B3qTDwAa">在相似的复杂性下，DAEC-64+NRES-64两级系统的双讲语音失真上略优于单阶段相似复杂度的DRUSE-AEC-128，其他指标二者相似。</li>
+<li data-pid="q1ml23-F">降低DAEC的复杂度会带来降噪性能的下降，但是AEC性能变化不明显</li>
+</ul>
+<p data-pid="NcfwnK2D">loss的消融实验</p>
+<img src="https://pic4.zhimg.com/80/v2-cbcaaac57a6a51aa698f129873a4e4e3_720w.jpg" width="733" class="origin_image zh-lightbox-thumb lazy" data-caption="" data-size="normal" data-rawwidth="733" data-rawheight="189" data-original="https://pic4.zhimg.com/v2-cbcaaac57a6a51aa698f129873a4e4e3_r.jpg" data-actualsrc="https://pic4.zhimg.com/v2-cbcaaac57a6a51aa698f129873a4e4e3_b.jpg" data-lazy-status="ok" />
+<h2>参考</h2>
+<ol class="ReferenceList">
+<li id="ref_1"><a class="ReferenceList-backLink" href="https://zhuanlan.zhihu.com/p/515947563#ref_1_0" data-reference-link="true">^</a>1&nbsp;<a class="external" href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/li21g_interspeech.pdf" rel="noopener noreferrer" target="_blank" data-za-detail-view-id="1043">https://www.isca-speech.org/archive/pdfs/interspeech_2021/li21g_interspeech.pdf</a></li>
+<li id="ref_2"><a class="ReferenceList-backLink" href="https://zhuanlan.zhihu.com/p/515947563#ref_2_0" data-reference-link="true">^</a>2&nbsp;<a class="external" href="https://www.isca-speech.org/archive/pdfs/interspeech_2021/liu21b_interspeech.pdf" rel="noopener noreferrer" target="_blank" data-za-detail-view-id="1043">https://www.isca-speech.org/archive/pdfs/interspeech_2021/liu21b_interspeech.pdf</a></li>
+</ol></div>
+</div>
+</div>
