@@ -1,0 +1,175 @@
+[
+    {
+	    "title": "Visual Attention Emerges from Recurrent Sparse Reconstruction",
+        "author": "Baifeng Shi, Yale Song, Neel Joshi, Trevor Darrell, Xin Wang",
+        "conference": "International Conference on Machine Learning (ICML), 2022",
+        "teaser": "assets/images/teasers/VARS.png",
+        "pdf": "https://arxiv.org/abs/2204.10962",
+        "code": "https://github.com/bfshi/VARS"
+    },
+    {
+	    "title": "DETReg: Unsupervised Pretraining with Region Priors for Object Detection",
+        "author": "Amir Bar, Xin Wang, Vadim Kantorov, Colorado J Reed, Roei Herzig, Gal Chechik, Anna Rohrbach, Trevor Darrell, Amir Globerson",
+        "conference": "Computer Vision and Pattern Recognition (CVPR), 2022",
+        "teaser": "assets/images/teasers/detreg.png",
+        "pdf": "https://arxiv.org/abs/2106.04550",
+        "code": "https://www.amirbar.net/detreg/"
+    },
+    {
+	    "title": "Robust Contrastive Learning against Noisy Views",
+        "author": "Ching-Yao Chuang, R Devon Hjelm, Xin Wang, Vibhav Vineet, Neel Joshi, Anotonio Torralba, Stefanie Jeglka, Yale Song",
+        "conference": "Computer Vision and Pattern Recognition (CVPR), 2022",
+        "teaser": "assets/images/teasers/rince.png",
+        "pdf": "https://arxiv.org/abs/2201.04309v1",
+        "code": "https://github.com/chingyaoc/RINCE"
+    },
+    {
+	    "title": "Unknown-Aware Object Detection: Learning What You Don’t Know from Videos in the Wild",
+        "author": "Xuefeng Du, Xin Wang, Gabriel Gozum, Yixuan Li",
+        "conference": "Computer Vision and Pattern Recognition (CVPR), 2022",
+        "teaser": "assets/images/teasers/stud.png",
+        "pdf": "",
+        "code": "https://github.com/deeplearning-wisc/stud"
+    },
+    {
+	    "title": "Robust Object Detection via Instance-Level Temporal Cycle Confusion",
+        "author": "Xin Wang, Thomas E. Huang*, Benlin Liu*, Fisher Yu, Xiaolong Wang, Joseph E. Gonzalez, Trevor Darrell",
+        "conference": "International Conference in Computer Vision (ICCV), 2021",
+        "teaser": "assets/images/teasers/cyc-conf.png",
+        "pdf": "https://arxiv.org/abs/2104.08381",
+        "code": "https://xinw.ai/cyc-conf"
+    }, 
+    {
+	    "title": "Wanderlust: Online Continual Object Detection in the Real World",
+        "author": "Jianren Wang, Xin Wang, Yue Shang-Guan, Abhinav Gupta",
+        "conference": "International Conference in Computer Vision (ICCV), 2021",
+        "teaser": "assets/images/teasers/wanderlust.png",
+        "pdf": "https://arxiv.org/pdf/2108.11005.pdf",
+        "code": "https://oakdata.github.io/"
+    },
+    {
+	    "title": "Instance-Aware Predictive Navigation in Multi-Agent Environments",
+        "author": "Jinkun Cao, Xin Wang, Trevor Darrell, Fisher Yu",
+        "conference": "International Conference on Robotics and Automation (ICRA), 2021",
+        "teaser": "assets/images/teasers/ipc-512.jpeg",
+        "pdf": "https://arxiv.org/pdf/2101.05893.pdf",
+        "code": "https://github.com/SysCV/spc2"
+    },
+    {
+	    "title": "Frustratingly Simple Few-Shot Object Detection",
+        "author": "Xin Wang*, Thomas E. Huang*, Trevor Darrell, Joseph E. Gonzalez, Fisher Yu",
+        "conference": "International Conference on Machine Learning (ICML), 2020",
+        "teaser": "assets/images/teasers/fsdet.png",
+        "pdf": "http://proceedings.mlr.press/v119/wang20j/wang20j.pdf",
+        "code": "https://github.com/ucbdrive/few-shot-object-detection",
+        "ppt": "https://icml.cc/media/Slides/icml/2020/virtual(no-parent)-15-15-00UTC-6261-frustratingly_s.pdf" 
+
+    },
+
+    {
+	    "title": "Task-Aware Feature Generation for Zero-Shot Compositional Learning",
+        "author": "Xin Wang, Fisher Yu, Trevor Darrell, Joseph E. Gonzalez",
+        "conference": "arXiv 2019",
+        "teaser": "assets/images/teasers/tds.jpg",
+        "pdf": "https://arxiv.org/abs/1906.04854"
+    },
+    
+    {
+	    "title": "BDD100K: A Diverse Driving Dataset for Heterogeneous Multitask Learning",
+        "author": "Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, Trevor Darrell",
+        "conference": "Computer Vision and Pattern Recognition (CVPR), 2020, Oral",
+        "teaser": "assets/images/teasers/bdd100k-512.jpg",
+        "pdf": "https://arxiv.org/abs/1805.04687",
+        "code": "https://github.com/ucbdrive/bdd-data",
+        "video": "https://www.youtube.com/watch?v=f6i7SQDrY9A&ab_channel=ComputerVisionFoundationVideos"
+    },
+
+    {
+	    "title": "Learning Saliency Propagation for Semi-Supervised Instance Segmentation",
+        "author": "Yanzhao Zhou, Xin Wang, Jianbin Jiao, Trevor Darrell, Fisher Yu",
+        "conference": "Computer Vision and Pattern Recognition (CVPR), 2020",
+        "teaser": "assets/images/teasers/shape_prop.png",
+        "pdf": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhou_Learning_Saliency_Propagation_for_Semi-Supervised_Instance_Segmentation_CVPR_2020_paper.pdf",
+        "code": "https://github.com/ucbdrive/ShapeProp",
+        "video": "https://www.youtube.com/watch?v=z6asXfYUhio&ab_channel=ComputerVisionFoundationVideos"
+    },
+
+    {
+	    "title": "ACE: Adapting to Changing Environments for Semantic Segmentation",
+        "author": "Zuxuan Wu, Xin Wang, Joseph E. Gonzalez, Tom Goldstein, Larry S. Davis",
+        "conference": "International Conference in Computer Vision (ICCV) 2019",
+        "teaser": "assets/images/teasers/ace.png",
+        "pdf": "https://arxiv.org/pdf/1904.06268.pdf"
+    },
+
+    {
+	    "title": "Few-shot Object Detection via Feature Reweighting",
+        "author": "Bingyi Kang*, Zhuang Liu*, Xin Wang, Fisher Yu, Jiashi Feng, Trevor Darrell",
+        "conference": "International Conference in Computer Vision (ICCV) 2019",
+        "teaser": "assets/images/teasers/few-shot-detection-512.jpg",
+        "pdf": "https://arxiv.org/abs/1812.01866",
+        "code": "https://github.com/bingykang/Fewshot_Detection"
+    },
+
+    {
+	    "title": "TAFE-Net: Task-Aware Feature Embeddings for Low Shot Learning",
+        "author": "Xin Wang, Fisher Yu, Ruth Wang,  Trevor Darrell, Joseph E. Gonzalez",
+        "conference": "Conference on Computer Vision and Pattern Recognition (CVPR) 2019",
+        "teaser": "assets/images/teasers/tafe.jpg",
+        "pdf": "http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_TAFE-Net_Task-Aware_Feature_Embeddings_for_Low_Shot_Learning_CVPR_2019_paper.pdf",
+        "code": "https://github.com/ucbdrive/tafe-net"
+    },
+
+    {
+	    "title": "Accel: A Corrective Fusion Network for Efficient Semantic Segmentation on Video",
+        "author": "Samvit Jain, Xin Wang, Joseph E. Gonzalez",
+        "conference": "Conference on Computer Vision and Pattern Recognition (CVPR) 2019",
+        "teaser": "assets/images/teasers/accel.jpg",
+        "pdf": "http://openaccess.thecvf.com/content_CVPR_2019/papers/Jain_Accel_A_Corrective_Fusion_Network_for_Efficient_Semantic_Segmentation_on_CVPR_2019_paper.pdf",
+        "code": "https://github.com/SamvitJ/Accel"
+    },
+
+    {
+	    "title": "Deep Mixture of Experts via Shallow Embedding",
+        "author": "Xin Wang, Fisher Yu, Lisa Dunlap, Yi-An Ma, Ruth Wang, Azalia Mirhoseini, Trevor Darrell, Joseph E. Gonzalez",
+        "conference": "Conference on Uncertainty in Artificial Intelligence (UAI) 2019",
+        "teaser": "assets/images/teasers/deepmoe.jpg",
+        "pdf": "https://arxiv.org/abs/1806.01531"
+    },
+
+    {
+	    "title": "SkipNet: Learning Dynamic Routing in Convolutional Networks",
+        "author": "Xin Wang, Fisher Yu, Zi-Yi Dou,  Trevor Darrell, Joseph E. Gonzalez",
+        "conference": "European Conference on Computer Vision (ECCV) 2018",
+        "teaser": "assets/images/teasers/skipnet.jpg",
+        "pdf": "http://openaccess.thecvf.com/content_ECCV_2018/papers/Xin_Wang_SkipNet_Learning_Dynamic_ECCV_2018_paper.pdf",
+        "code": "https://github.com/ucbdrive/skipnet"
+    },
+
+    {
+	    "title": "IDK Cascades: Fast Deep Learning by Learning not to Overthink",
+        "author": "Xin Wang, Yujia Luo, Daniel Crankshaw, Alexey Tumanov, Fisher Yu, Joseph E. Gonzalez",
+        "conference": "Conference on Uncertainty in Artificial Intelligence (UAI) 2018",
+        "teaser": "assets/images/teasers/cascades.jpg",
+        "pdf": "http://auai.org/uai2018/proceedings/papers/212.pdf"
+    },
+
+    {
+	    "title": "Clipper: A Low-Latency Online Prediction Serving System",
+        "author": "Daniel Crankshaw, Xin Wang, Guilio Zhou, Michael J. Franklin, Joseph E. Gonzalez, Ion Stoica",
+        "conference": "USENIX Symposium on Networked Systems Design and Implementation (NSDI) 2017",
+        "teaser": "assets/images/teasers/clipper-logo.png",
+        "pdf": "https://www.usenix.org/system/files/conference/nsdi17/nsdi17-crankshaw.pdf",
+        "code": "http://clipper.ai",
+        "video": "https://www.usenix.org/conference/nsdi17/technical-sessions/presentation/crankshaw"
+    },
+
+    {
+	    "title": "Scalable Training and Serving of Personalized Models",
+        "author": "Daniel Crankshaw, Xin Wang, Joseph E. Gonzalez, Michael J. Franklin",
+        "conference": "LearningSys 2015",
+        "teaser": "assets/images/teasers/learnsys.jpg",
+        "pdf": "http://learningsys.org/papers/LearningSys_2015_paper_27.pdf"
+    }
+
+]
