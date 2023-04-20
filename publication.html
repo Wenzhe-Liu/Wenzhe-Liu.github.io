@@ -21,62 +21,75 @@
 	    ul{list-style-type:none;margin:0;padding:0;overflow:hidden;background-color:#bbb;} 
 	    li{float:left} 
 	    li a{display:block;width:120px; padding:20px 50px; font-size:50}
-    </style>
+
+<!--     body {
+    min-width: 320px;
+    height: auto;
+    background-color: #fff;
+    font-family: Open Sans,Arial,Helvetica,Microsoft Yahei,sans-serif;
+    font-size: 1px;
+    font-display: fallback;
+    line-height: 1.5;
+} -->
+    div a{
+        position: relative;
+    flex:1 0 auto;
+    height: 64px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 18px;
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+    color: #202325;
+    font-size: 20px;
+    }
+    nav div{
+        height: 64px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+width: 1260px;
+    max-width: 90%;
+    margin: auto;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    }
+.acontainer {font-size: 0;}
+.aleft {
+ display: inline-block;
+ vertical-align: top;
+ width: 300px;
+ }
+.aright {
+ display: inline-block;
+ width: calc(100% - 300px);
+ vertical-align: top;}
+.aright h1{    font-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 8px;
+          margin-left:8px;}
+.bio {ont-size: 22px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 2px;
+          margin-left:8px;}
+</style> 
 </head>
 
 <body>
     <!-- Navigation bar -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarItems">
-        <!--<ul class="navbar-nav ml-auto">-->
-        <ul class="navbar-nav mx-auto">
-
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " href="index.html" id="homeDropdown" aria-haspopup="true" aria-expanded="false">
-                  Home
-                </a> 
-                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
-                  <li><a class="dropdown-item" href="index.html#about">About</a></li>
-                  <li><a class="dropdown-item" href="index.html#research">Research</a></li>
-                  <li><a class="dropdown-item" href="index.html#news">News</a></li>
-                  <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
-                </ul>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link "
-                href="index.html">Home</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link "
-                href="students.html">Students</a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link active"
-                href="publication.html">Publications</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link "
-                   href="software.html">Software</a>
-            </li> -->
-	    <li class="nav-item">
-                <a class="nav-link "
-                   href="blogs.html">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link "
-                   href="awards.html">Awards</a>
-            </li>
-            <!-- <li class="nav-item">
-                <a class="nav-link " href="service.html">Services</a>
-            </li> -->
-        </ul>
-    </div>
-</nav>
+<header><nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+     <div class="collapse navbar-collapse" id="navbarItems">
+         <div color="#202325"><div color="#202325">
+                 <a href="index.html" position="relative" height="64px" display="inline-flex">Home</a>
+                 <a href="publication.html">Publications</a>
+<a href="blogs.html">Blogs</a>
+                 <a href="awards.html">Awards</a></div></div></div></nav></header>
 
     <div class="container">
         <div class="row" id="publication">
