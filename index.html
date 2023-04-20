@@ -20,83 +20,66 @@
         integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+	    ul{list-style-type:none;margin:0;padding:0;overflow:hidden;background-color:#bbb;} 
+	    li{float:left} 
+	    li a{display:block;width:120px; padding:20px 50px; font-size:50}
+    </style>
 </head>
 
 <body>
     <!-- Navigation bar -->
-	 <div>
-        <ul>
-	   <li>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarItems">
+        <!--<ul class="navbar-nav ml-auto">-->
+        <ul class="navbar-nav mx-auto">
+
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="index.html" id="homeDropdown" aria-haspopup="true" aria-expanded="false">
+                  Home
+                </a> 
+                <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+                  <li><a class="dropdown-item" href="index.html#about">About</a></li>
+                  <li><a class="dropdown-item" href="index.html#research">Research</a></li>
+                  <li><a class="dropdown-item" href="index.html#news">Education</a></li>
+                  <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
+                </ul>
+            </li> -->
+			<li class="nav-item">
                 <a class="nav-link "
                 href="index.html">Home</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a class="nav-link "
                 href="publication.html">Publications</a>
             </li>
-	    <li>
+            <!-- <li class="nav-item">
+                <a class="nav-link "
+                   href="software.html">Software</a>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link " href="teaching.html">Teaching</a>
+            </li> -->
+	    <li class="nav-item">
                 <a class="nav-link "
                    href="blogs.html">Blog</a>
             </li>
 		
-            <li>
+            <li class="nav-item">
                 <a class="nav-link "
                    href="awards.html">Awards</a>
             </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link " href="service.html">Services</a>
+            </li> -->
         </ul>
     </div>
-<!-- 	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-	    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarItems"
-		aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	    </button>
-
-	    <div class="collapse navbar-collapse" id="navbarItems">
-		<!--<ul class="navbar-nav ml-auto">-->
-		<ul class="navbar-nav mx-auto">
-
-		    <!-- <li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle active" href="index.html" id="homeDropdown" aria-haspopup="true" aria-expanded="false">
-			  Home
-			</a> 
-			<ul class="dropdown-menu" aria-labelledby="homeDropdown">
-			  <li><a class="dropdown-item" href="index.html#about">About</a></li>
-			  <li><a class="dropdown-item" href="index.html#research">Research</a></li>
-			  <li><a class="dropdown-item" href="index.html#news">Education</a></li>
-			  <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
-			</ul>
-		    </li> -->
-				<li class="nav-item">
-			<a class="nav-link "
-			href="index.html">Home</a>
-		    </li>
-		    <li class="nav-item">
-			<a class="nav-link "
-			href="publication.html">Publications</a>
-		    </li>
-		    <!-- <li class="nav-item">
-			<a class="nav-link "
-			   href="software.html">Software</a>
-		    </li> -->
-		    <!-- <li class="nav-item">
-			<a class="nav-link " href="teaching.html">Teaching</a>
-		    </li> -->
-		    <li class="nav-item">
-			<a class="nav-link "
-			   href="blogs.html">Blog</a>
-		    </li>
-
-		    <li class="nav-item">
-			<a class="nav-link "
-			   href="awards.html">Awards</a>
-		    </li>
-		    <!-- <li class="nav-item">
-			<a class="nav-link " href="service.html">Services</a>
-		    </li> -->
-		</ul>
-	    </div>
-	</nav> -->
-	
+</nav>
 <div class="container">
     <div class="row justify-content-center" id="about">
         <div class="col-md-4">
@@ -106,6 +89,7 @@
         <div class="col-md-4 flex align-items-center about_info">
             <div>
                 <h1>Wenzhe Liu (刘文哲) </h1> 
+		    <p>(may need to enter ctrl+shift+R to refresh the page)</p>
 
 				<h6>
                     <a href="wenzheliu@tencent.com" target="_blank"><img src="./img/email.jpg" height="20px" style="margin-bottom:-3px"></a> &nbsp
@@ -119,7 +103,8 @@
                 <div class="row">
 					<div class="col-md-12">
 						<div class="about_text">
-							<p> I currently work at Tencent and focus on speech/audio processing with deep learning for Real-Time Communication (RTC). I am interested in audio codec & bandwidth extension, speech front-end processing, and microphone array processing. 
+							<p> I currently work at Tencent Ethereal Audio Lab (which supports audio applications for <a href="https://meeting.tencent.com/" style="color:black;">VooV Meeting</a>, <a href="https://im.qq.com/index/" style="color:black;">QQ</a> and <a href="https://cloud.tencent.com/product/trtc" style="color:black;">TRTC</a>), 
+								and focus on speech/audio signal processing with deep learning for Real-Time Communication. I am interested in audio codec & bandwidth extension, speech front-end processing, and microphone array processing. 
 							  
 							</p>
 						</div>
@@ -142,7 +127,7 @@
                     
                     <div class="exp_company">
 					<center>
-                        Speech Signal Processing with Deep Learning, especially audio codec & BWE, 3A (AEC, ANS and AGC) for RTC, and beamforming. 
+                        Speech Signal Processing with Deep Learning, especially 3A (AEC, ANS and AGC) for RTC, audio codec & BWE, and beamforming. 
                     </center>
 					</div>
                     
@@ -182,7 +167,7 @@
                     </div>
                     <div class="exp_company">
                         Tencent Ethereal Audio Lab (腾讯天籁实验室, 深圳), Shenzhen</br>
-						Supervisor: Wei Xiao, and Shidong Shang
+						Supervisor: Shidong Shang
                     </div>
                     <div class="exp_date_long">
                         Jul 2022 - Now
@@ -195,7 +180,6 @@
                     </div>
                     <div class="exp_company">
                         Tencent Ethereal Audio Lab, Shenzhen</br>
-						Supervisor: Wei Xiao, and Shidong Shang
                     </div>
                     <div class="exp_date_long">
                         Jul 2020 - Aug 2020
